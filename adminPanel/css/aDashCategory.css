@@ -27,6 +27,7 @@ body {
     padding: 1rem;
 
     & aside{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -37,6 +38,26 @@ body {
         border-radius: 2rem;
         overflow: hidden;
         padding: 1rem;
+        transition: all .5s ease;
+
+        & .menuIcon{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            aspect-ratio: 4/4;
+            background-color: var(--mainColor);
+            border-radius: .5rem;
+
+            & img{
+                width: 98%;
+                aspect-ratio: 4/4;
+                object-fit: cover;
+            }
+        }
 
         & .profile{
             display: flex;

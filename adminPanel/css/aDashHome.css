@@ -27,6 +27,7 @@ body {
     padding: 1rem;
 
     & aside{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -37,6 +38,26 @@ body {
         border-radius: 2rem;
         overflow: hidden;
         padding: 1rem;
+        transition: all .5s ease;
+
+        & .menuIcon{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            aspect-ratio: 4/4;
+            background-color: var(--mainColor);
+            border-radius: .5rem;
+
+            & img{
+                width: 98%;
+                aspect-ratio: 4/4;
+                object-fit: cover;
+            }
+        }
 
         & .profile{
             display: flex;
@@ -480,6 +501,74 @@ body {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*RESPONSIVE UP TO LAPTOP SCREEN------------------------*/
+@media (max-width : 1280px) {
+    body{
+
+        & aside{
+            font-size: small;
+
+            & .menuIcon{
+                right: .5rem;
+                width: 2rem;
+            }
+
+            & .profile{
+
+                & .info{
+
+                    & h1{
+                        font-size: x-large;
+                    }
+                }
+            }
+
+            & .menu{
+
+                & h2{
+                    font-size: x-large;
+                }
+            }
+        }
+
+        & main{
+
+            & .panelActivity{
+
+                & .titleActivity{
+
+                    & .left{
+                        font-size: large;
+
+                        & .clock{
+                            width: 3rem;
+                        }
+                    }
+
+                    & .searchZone{
+                        width: 18rem;
+                    }
+                }
+
+                & .panel{
+                    overflow: scroll hidden;
+
+                    & .panelUp{
+                        flex-shrink: 0;
+                        width: 100dvw;
+                        font-size: small;
+                    }
+
+                    & .panelDown{
+                        flex-shrink: 0;
+                        width: 100dvw;
                     }
                 }
             }
